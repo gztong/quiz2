@@ -34,7 +34,7 @@ $(function(){
       $("#body").fadeOut(1000, function(){
          $("#body").fadeIn(1000);
       });
-    })
+    });
   };
   
 
@@ -44,9 +44,10 @@ $(function(){
   });
 
   //  - loop through the list itmes in the <ol> and change their text and color to be different from what it is now
-  $('ol li').foreach(
-
-   );
+  $.each( $('ol li'), function(i, li){
+      $(li).css('color', 'red'); 
+      $(li).css('background-color', 'lightblue'); 
+  });
 
 
 
